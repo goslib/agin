@@ -18,7 +18,7 @@ go get -u github.com/goslib/agin
 
 You may check out the demo below to build your own app on.
 
-> The demo file is [here](https://github.com/goslib/demos/bolb/master/main-agin.go).
+> The demo file is [here](https://github.com/goslib/demos/blob/main/agin-main.go).
 
 ```go
 package main
@@ -35,7 +35,7 @@ func main() {
 		agin.NewEndingRouter("sub-router", "Sub Router", "/router",
 			"A ending router with corresponding grouped routes in implemented methods.",
 			agin.NewGetRoute("API Ping", "Ping your API to test your network connecting.",
-				"/ping", agin.NewGinResponseHelperWrapper(DemoPingHandler)),
+				"/ping", agin.NewHandlerWrapper(DemoPingHandler)),
 		),
 	)
 
